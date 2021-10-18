@@ -1,2 +1,21 @@
 <?php
-$greeting = 'Hola mon!';
+
+// QUERY STRING
+
+//var_dump($_GET['name']);
+//$name = 'Marc';
+
+// API
+function greet() {
+    $name = htmlspecialchars($_GET['name']);
+    $surname = $_GET['surname'];
+
+    return "Hola $name $surname !";
+}
+
+$greeting = greet();
+
+
+
+//$greeting = "Hola ${name}!";
+//$greeting = 'Hola ' . $_GET['name'] . ' ' . $_GET['surname'] .'!';
