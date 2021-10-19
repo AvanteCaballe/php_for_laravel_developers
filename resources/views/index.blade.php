@@ -9,5 +9,22 @@
 </head>
 <body>
     <h1><?=$greeting;?></h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Completed</th>
+        </tr>
+        <?php foreach ($tasks as $task): ?>
+            <tr>
+                <td><?=$task->id;?></td>
+                <td><?=$task->title;?></td>
+                <td><?=$task->description;?></td>
+                <td><?=$task->completed;?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
 </body>
 </html>
