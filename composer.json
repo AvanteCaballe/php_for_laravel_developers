@@ -1,0 +1,17 @@
+{
+    "name": "avante/php_for_laravel_developers",
+    "description": "Bla bla",
+    "type": "project",
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    },
+    "authors": [
+        {
+            "name": "AvanteCaballe",
+            "email": "marcavante@iesebre.com"
+        }
+    ],
+    "require": {}
+}
