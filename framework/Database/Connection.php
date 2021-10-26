@@ -6,19 +6,12 @@ use PDO;
 
 class Connection
 {
-    public $config;
-
-    public function __construct($config)
-    {
-        $this->config = $config;
-    }
-
-
-    function connectDB($config){ //Dependency Injection
+    public static function make($config) {
         try {
-            return new PDO("" . ($config['database']['databasetype']) . ":host=" . ($config['database']['host']) . ";dbname=" . ($config['database']['name']) . "",
-                $config['database']['user'],
-                $config['database']['password']);
+            return new PDO(
+                "" . ($config['databasetype']) . ":host=" . ($config['host']) . ";dbname=" . ($config['name']) . "",
+                $config['user'],
+                $config['password']);
         } catch (\Exception $e) {
             echo 'Error de connexió a la base de dades.';
         }
